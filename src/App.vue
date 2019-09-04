@@ -1,28 +1,39 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <Header />
+    <Sidebar />
+    <Dashboard />
   </div>
 </template>
 
+
+
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/header/Header'
+import Sidebar from './components/sidebar/Sidebar'
+import Dashboard from './components/dashboard/Dashboard.vue'
+// import  {getAllData, closeConnection} from './sqlite/index.js'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header,
+    Sidebar, 
+    Dashboard
+  },
+  methods: {
+   
+  },
+  created() {
+    // getAllData()
   }
 }
+
 </script>
 
+
+
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
